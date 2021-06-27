@@ -4,6 +4,8 @@ import React, { useState, useEffect } from 'react';
 // import PropTypes from 'prop-types';
 import axios from 'axios';
 import AlbumCard from './AlbumCard';
+import ArtistCard from './ArtistCard';
+
 import { albumsApi, artistApi, genresApi, tracksApi } from '../api/albumsApi';
 
 const Deezer = () => {
@@ -19,9 +21,9 @@ const Deezer = () => {
       setGenres(res.data.genres);
       setTitres(res.data.tracks);
       console.log('all datas', res.data);
-      console.log('artist data', res.data.artist);
-      console.log('genres data', res.data.genres);
-      console.log('tracks data', res.data.tracks);
+      console.log('in Deezer artist data', res.data.artist);
+      console.log('in Deezer genres data', res.data.genres);
+      console.log('in Deezer tracks data', res.data.tracks);
     });
   }, []);
 
@@ -29,6 +31,7 @@ const Deezer = () => {
     <>
       <div className=''>
         <AlbumCard key={datas.id} data={datas} />
+        <ArtistCard data={datas} />
       </div>
     </>
   );

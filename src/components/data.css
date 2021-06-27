@@ -1,0 +1,35 @@
+.cardAlbum {
+  display: grid;
+  justify-content: center;
+}
+
+.artiste {
+  display: flex;
+  background-color: tomato;
+  width: 500px;
+  height: 150px;
+}
+
+.album {
+  margin: 1rem 0;
+  background-color: yellow;
+  width: 500px;
+  height: 200px;
+}
+
+.title {
+  background-color: chartreuse;
+  height: 30px;
+}
+
+.imgAlbum {
+  background-color: crimson;
+  width: 150px;
+  height: 150px;
+}
+
+.theArtist {
+  background-color: darkgreen;
+  width: 150px;
+  height: 30px;
+}
